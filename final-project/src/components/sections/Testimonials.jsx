@@ -1,20 +1,19 @@
 import React from "react";
+import Section from "../common/Section";
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-16 bg-white">
-      <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold mb-10 text-gray-900">
-          What Our Customers Say
-        </h2>
-        <div className="max-w-2xl mx-auto bg-gray-100 p-8 rounded-xl shadow-md">
-          <p className="text-gray-700 italic mb-4">
-            “RAMM TECH’s laptop stand completely changed how I work —
-            comfortable, stylish, and built to last!”
-          </p>
-          <h4 className="font-semibold text-blue-600">— Gilbert 22, Designer</h4>
-        </div>
+    <Section id="testimonials" title="What Clients Say About Ramm Tech">
+      <div className="max-w-3xl mx-auto space-y-8">
+        <blockquote className="italic text-gray-700">
+          “Ramm Tech products are top quality! My RammBook laptop is incredibly fast and reliable.”
+          <br /> <span className="font-bold text-blue-600">– Alice W.</span>
+        </blockquote>
+        <blockquote className="italic text-gray-700">
+          “Best service and durable electronics. Highly recommend their smart TVs!”
+          <br /> <span className="font-bold text-blue-600">– Brian K.</span>
+        </blockquote>
       </div>
-    </section>
+    </Section>
   );
 }

@@ -2,40 +2,21 @@ import React from "react";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6">
-        <div className="md:w-1/2 mb-10 md:mb-0">
-          <img
-            src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQYs6umncWAt_JRltabQRlap1h5jMO39jp4UmHkfqcd3ecLFKnMBVtDDmJg6GHj2Zc2de2qoqgXifV9Ip_HodD-x1iZ_P90p7iK3oS0dW391MXffD5KDw_0zBsaHdCTxjduDAM-mHo&usqp=CAc"
-            alt="About RAMM TECH"
-            className="rounded-2xl shadow-lg w-full object-cover"
-          />
-        </div>
-
-        <div className="md:w-1/2 md:pl-12 text-right">
-          <h3 className="text-3xl font-semibold mb-4 text-blue-600">
-            We Power Your Laptop Lifestyle
-          </h3>
-          <p className="text-gray-600 mb-8">
-            Our premium quality laptop accessories enhance workflow comfort,
-            speed, and productivity. Every product is crafted for modern
-            professionals and creators.
-          </p>
-
-          <div className="space-y-6">
-            {[
-              { title: "Fast Delivery", desc: "Get your accessories quickly with our 24hr delivery system." },
-              { title: "Smart Designs", desc: "Ergonomically built for performance, portability, and comfort." },
-              { title: "Professional Quality", desc: "Built with precision tools used by professional studios." },
-              { title: "Long lasting", desc: "durable accessorries with tools to keep them safe for long." },
-            ].map((item, i) => (
-              <div key={i} className="p-6 bg-gray-50 rounded-xl shadow text-right">
-                <h4 className="font-bold mb-2 text-blue-600">{item.title}</h4>
-                <p className="text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+    <section id="about" className="py-20 bg-white flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20">
+      <div className="lg:w-1/2 space-y-5 text-right">
+        <h2 className="text-4xl font-bold text-gray-900">About Ramm Tech</h2>
+        <p className="text-gray-600 leading-relaxed">
+        Ramm Tech is your trusted hub for high-quality electronic tools and smart devices. 
+        Our mission is to bring innovation, reliability, and performance into your everyday life — 
+        whether at home or in business.
+        </p>
+      </div>
+      <div className="lg:w-1/2 mt-10 lg:mt-0 flex justify-center">
+        <img
+          src="data:image/webp;base64,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"
+          alt="About ElectroPro"
+          className="rounded-lg shadow-md w-full max-w-md"
+        />
       </div>
     </section>
   );
