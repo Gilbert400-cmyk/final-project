@@ -1,78 +1,38 @@
-// src/components/sections/Hero.jsx
 import React from "react";
 import { Laptop, Phone, Tv, Watch } from "lucide-react";
 import Button from "../common/Button";
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-[520px] lg:h-[600px] flex items-center">
-      {/* Background Image */}
+    <section className="relative w-full h-[520px] lg:h-[600px] flex items-center justify-center">
+    
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            "url('https://tse4.mm.bing.net/th/id/OIP.nTJJGgspUMyEtKTnIXaI9AHaHa?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3')",
+            "url('data:image/webp;base64,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')",
         }}
       />
 
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black/30 lg:bg-black/20" />
 
-      {/* Hero Content */}
-      <div className="relative container mx-auto px-6 lg:px-0">
-        <div className="max-w-lg">
-          <p className="text-xs uppercase tracking-[0.15em] text-gray-200 mb-3">
-            Ramm Tech • Electronics
-          </p>
+      
+      <div className="relative z-10 container mx-auto px-6 lg:px-0 flex flex-col items-center text-center">
+        <p className="text-xs uppercase tracking-[0.15em] text-white mb-3">
+          RAMM TECH • Electronics
+        </p>
 
-          <h1 className="text-3xl lg:text-5xl font-bold text-white leading-tight mb-4">
-            Creative Tech Simplifies Your Everyday.
-          </h1>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
+          Creative Tech Simplifies Your Everyday
+        </h1>
 
-          <p className="text-sm lg:text-base text-gray-200 max-w-md mb-6">
-            Discover laptops, phones, TVs, smartwatches and premium tech that 
-            enhances productivity and comfort in your daily life.
-          </p>
+        <p className="text-sm sm:text-base lg:text-lg text-white max-w-xl mb-6">
+          Discover laptops, phones, TVs, smartwatches, and premium tech that 
+          enhances productivity and comfort in your daily life.
+        </p>
 
-          {/* CTA Buttons */}
-          <div className="flex items-center gap-4">
-            <Button label="Shop Now" />
-            <button className="text-sm font-medium text-white hover:text-gray-300">
-              View Collections
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Icon Feature Bar */}
-      <div className="absolute bottom-0 left-0 w-full">
-        <div className="bg-teal-700/95 backdrop-blur-md py-4 lg:py-6 shadow-lg">
-          <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 px-6 lg:px-0">
-
-            {/* Item 1 */}
-            <div className="flex flex-col items-center text-white">
-              <Laptop size={26} className="mb-2" />
-              <p className="text-sm font-semibold">Latest Laptops</p>
-            </div>
-
-            {/* Item 2 */}
-            <div className="flex flex-col items-center text-white">
-              <Phone size={26} className="mb-2" />
-              <p className="text-sm font-semibold">Smart Phones</p>
-            </div>
-
-            {/* Item 3 */}
-            <div className="flex flex-col items-center text-white">
-              <Tv size={26} className="mb-2" />
-              <p className="text-sm font-semibold">LED & Smart TVs</p>
-            </div>
-
-            {/* Item 4 */}
-            <div className="flex flex-col items-center text-white">
-              <Watch size={26} className="mb-2" />
-              <p className="text-sm font-semibold">Smart Watches</p>
-            </div>
-          </div>
+        <div className="flex flex-col sm:flex-row items-center gap-4">
+        <Button text="Shop Now" />
         </div>
       </div>
     </section>
