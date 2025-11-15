@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.17",
+    "lighthouse": "^13.0.1",
     "lucide-react": "^0.553.0",
     "prop-types": "^15.8.1",
+    "puppeteer": "^24.30.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "tailwindcss": "^4.1.17"
