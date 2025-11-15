@@ -6,6 +6,7 @@ import Products from "./components/sections/Products";
 import Testimonials from "./components/sections/Testimonials";
 import Newsletter from "./components/sections/Newsletter";
 import Footer from "./components/layout/Footer";
+import Features from "./components/sections/Features";
 
 export default function App() {
   return (
@@ -13,7 +14,8 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <About />
+         <About />
+        <Features />
         <Products />
         <Testimonials />
         <Newsletter />

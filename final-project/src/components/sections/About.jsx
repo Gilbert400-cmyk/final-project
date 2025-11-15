@@ -2,19 +2,40 @@ import React from "react";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-white flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20">
-      <div className="lg:w-1/2 space-y-5 text-right">
-        <h2 className="text-4xl font-bold text-gray-900">About Ramm Tech</h2>
-        <p className="text-gray-600 leading-relaxed">
-        Ramm Tech is your trusted hub for high-quality electronic tools and smart devices. 
-        Our mission is to bring innovation, reliability, and performance into your everyday life — 
-        whether at home or in business.
-        </p>
-      </div>
-      <div className="lg:w-1/2 mt-10 lg:mt-0 flex justify-center">
-        <img
-          src="data:image/webp;base64,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"
-        />
+    <section id="about" className="py-16 bg-white">
+      {/* Use the standard wide container and define the grid structure */}
+      {/* Structure: [Image/Logo | Text Content | Hidden Spacer] -> Effectively a left-aligned 2-column layout */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-3 items-start gap-12 lg:gap-16">
+
+        {/* Column 1 (Image/Logo) - Takes up one column and is aligned to the left */}
+        {/* Changed justify-end to justify-start */}
+        <div className="lg:col-span-1 mt-6 lg:mt-0 flex justify-center lg:justify-start">
+          <img
+            // This Base64 image represents the "RAMM TECHNOLOGIES" logo
+            src="https://tse3.mm.bing.net/th/id/OIP.SV7yOLQjZrhN_FS-6C1bkgHaEL?w=267&h=180&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1"
+            alt="Ramm Technologies Logo"
+            className="w-full max-w-xs h-auto object-cover rounded-xl shadow-lg"
+          />
+        </div>
+        
+        
+        <div className="lg:col-span-1 space-y-4 text-left">
+          <h2 className="text-4xl font-bold text-gray-900">About Ramm Tech</h2>
+          <p className="text-gray-600 leading-relaxed">
+            Ramm Tech is your trusted hub for high-quality electronic tools and smart devices. 
+            Our mission is to bring innovation, reliability, and performance into your everyday life — 
+            whether at home or in business.
+          </p>
+          <p className="text-gray-600 leading-relaxed hidden sm:block">
+            Our commitment to sustainability and cutting-edge design ensures that every product 
+            you purchase is built to last and provides exceptional user experience. We prioritize 
+            quality, design, and customer satisfaction above all else.
+          </p>
+        </div>
+
+        
+        <div className="hidden lg:block"></div>
+
       </div>
     </section>
   );
