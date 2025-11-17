@@ -8,11 +8,6 @@ export default function Footer() {
          {/* Simple layout: Logo on the left, quick links on the right */}
          <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
              <h4 className="text-white text-2xl font-semibold mb-4 md:mb-0">Ramm-tech</h4>
-             <nav className="flex flex-wrap gap-x-8 gap-y-2 text-sm">
-                <a href="#about" className="hover:text-white transition duration-150">About Us</a>
-                <a href="#products" className="hover:text-white transition duration-150">Shop</a>
-                <a href="#" className="hover:text-white transition duration-150">Privacy Policy</a>
-             </nav>
          </div>
       </div>
       
