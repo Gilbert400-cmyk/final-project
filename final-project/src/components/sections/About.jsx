@@ -1,42 +1,82 @@
-import React from "react";
+// About.jsx
 
-export default function About() {
+import React from 'react';
+// Install 'lucide-react' for the checkmark icon: npm install lucide-react
+import { Check } from 'lucide-react'; 
+
+const About = () => {
+  // Data for the feature list
+  const features = [
+    {
+      title: "Best services",
+      description: "Best Services delivers reliable, high-quality solutions tailored to meet each client’s needs. Our team ensures professional, efficient, and customer-focused support every time.",
+    },
+    {
+      title: "Durable products",
+      description: "Durable Electronic Services offers high-quality electronic solutions built to last and perform reliably. We ensure every device is supported with expert care and long-term value.",
+    },
+  ];
+
   return (
-    <section id="about" className="py-16 bg-white">
-      {/* Use the standard wide container and define the grid structure */}
-      {/* Structure: [Image/Logo | Text Content | Hidden Spacer] -> Effectively a left-aligned 2-column layout */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-3 items-start gap-12 lg:gap-16">
+    <section className="bg-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        
+        {/* Two-Column Grid (Image Left, Content Right) */}
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+          
+          {/* Left Column: Large Image */}
+          <div className="w-full lg:w-1/2 order-1">
+            {/* NOTE: Replace the placeholder URL with your actual image path */}
+            <img
+              src="https://plus.unsplash.com/premium_photo-1683758343999-0975ec01d0cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGV2aWNlc3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" 
+              alt="Sofa and wooden coffee table"
+              // Styling for rounded corners and shadow, matching the screenshot
+              className="w-full h-auto object-cover rounded-lg shadow-xl"
+            />
+          </div>
 
-        {/* Column 1 (Image/Logo) - Takes up one column and is aligned to the left */}
-        {/* Changed justify-end to justify-start */}
-        <div className="lg:col-span-1 mt-6 lg:mt-0 flex justify-center lg:justify-start">
-          <img
-            // This Base64 image represents the "RAMM TECHNOLOGIES" logo
-            src="https://tse3.mm.bing.net/th/id/OIP.SV7yOLQjZrhN_FS-6C1bkgHaEL?w=267&h=180&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1"
-            alt="Ramm Technologies Logo"
-            className="w-full max-w-xs h-auto object-cover rounded-xl shadow-lg"
-          />
+          {/* Right Column: Text Content and Features */}
+          <div className="w-full lg:w-1/2 order-2">
+            
+            {/* Main Heading: Bold and dark text */}
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 mb-4 leading-tight">
+             About Ramm Tech <br />
+        
+            </h2>
+
+            {/* Summary Paragraph */}
+            <p className="text-base text-gray-600 mb-10 max-w-md">
+             Ramm Tech is your trusted hub for high-quality electronic tools and smart devices. Our mission is to bring innovation, reliability, and performance into your everyday life — whether at home or in business.
+            </p>
+
+            {/* Features List */}
+            <div className="space-y-8">
+              {features.map((feature, index) => (
+                <div key={index} className="flex space-x-4 items-start">
+                  
+                  {/* Checkmark Icon */}
+                  <div className="flex-shrink-0 mt-1">
+                    <Check className="h-5 w-5 text-gray-800" /> {/* Dark checkmark color */}
+                  </div>
+                  
+                  <div>
+                    {/* Feature Title: Bold/Semi-bold text */}
+                    <h3 className="text-base font-semibold text-gray-900 mb-1">
+                      {feature.title}
+                    </h3>
+                    {/* Feature Description: Detailed description, slightly lighter text */}
+                    <p className="text-sm text-gray-600">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        
-        
-        <div className="lg:col-span-1 space-y-4 text-left">
-          <h2 className="text-4xl font-bold text-gray-900">About Ramm Tech</h2>
-          <p className="text-gray-600 leading-relaxed">
-            Ramm Tech is your trusted hub for high-quality electronic tools and smart devices. 
-            Our mission is to bring innovation, reliability, and performance into your everyday life — 
-            whether at home or in business.
-          </p>
-          <p className="text-gray-600 leading-relaxed hidden sm:block">
-            Our commitment to sustainability and cutting-edge design ensures that every product 
-            you purchase is built to last and provides exceptional user experience. We prioritize 
-            quality, design, and customer satisfaction above all else.
-          </p>
-        </div>
-
-        
-        <div className="hidden lg:block"></div>
-
       </div>
     </section>
   );
-}
+};
+
+export default About;
